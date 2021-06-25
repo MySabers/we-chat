@@ -46,7 +46,8 @@
       </el-col>
       <el-col class="main-content">
         <FrameMenu></FrameMenu>
-        <ChatBlank></ChatBlank>
+<!--        <ChatBlank></ChatBlank>-->
+        <Chat></Chat>
       </el-col>
     </el-row>
   </div>
@@ -56,11 +57,12 @@
   import SystemInformation from './LandingPage/SystemInformation'
   import FrameMenu from './main/FrameMenu'
   import ChatBlank from './main/ChatBlank'
+  import Chat from './main/Chat'
   const { remote } = require('electron')
 
   export default {
     name: 'landing-page',
-    components: { SystemInformation, FrameMenu, ChatBlank },
+    components: { SystemInformation, FrameMenu, ChatBlank, Chat },
     data () {
       return {
         mainSearch: ''
