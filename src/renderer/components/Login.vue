@@ -15,7 +15,7 @@
       <div class="usernameAndPassword">
         <el-input v-model="username" placeholder="用户名" style="margin-bottom: 20px"></el-input>
         <el-input v-model="password" type="password" placeholder="密码" style="margin-bottom: 20px"></el-input>
-        <el-button type="success" style="width: 100%" @click="login">登录</el-button>
+        <el-button type="success" style="width: 100%" @click="Login">登录</el-button>
       </div>
     </div>
 
