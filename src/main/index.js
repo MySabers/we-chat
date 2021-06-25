@@ -21,9 +21,9 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 400,
+    height: 402,
     useContentSize: true,
-    width: 275,
+    width: 277,
     frame: false, /* 去掉顶部导航 去掉关闭按钮 最大化最小化按钮 */
     transparent: true
 
