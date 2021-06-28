@@ -24,6 +24,7 @@ export default {
   background-color: rgb(245, 245, 245);
   position: relative;
   color: #646566;
+  -webkit-app-region: drag;
 }
 
 #frameMenu div {

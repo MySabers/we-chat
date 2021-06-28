@@ -45,9 +45,9 @@
         </div>
       </el-col>
       <el-col class="main-content">
-        <FrameMenu></FrameMenu>
-<!--        <ChatBlank></ChatBlank>-->
-        <Chat></Chat>
+          <FrameMenu></FrameMenu>
+          <!--        <ChatBlank></ChatBlank>-->
+          <Chat></Chat>
       </el-col>
     </el-row>
   </div>
@@ -197,6 +197,8 @@
     height: 100vh;
     width: calc(100vw - 305px);
   }
+
+
 
 
 
