@@ -1,20 +1,27 @@
 <template>
 <div id="frameMenu">
   <div class="minus">
-    <i class="el-icon-minus"></i>
+    <i class="el-icon-minus" @click="windowOperation('window-min')"></i>
   </div>
   <div class="full-or-not">
-    <i class="el-icon-full-screen"></i>
+    <i class="el-icon-full-screen" @click="windowOperation('window-max')"></i>
   </div>
   <div class="close">
-    <i class="el-icon-close"></i>
+    <i class="el-icon-close"  @click="windowOperation('window-close')"></i>
   </div>
 </div>
 </template>
 
 <script>
+const { ipcRenderer } = require('electron')
+
 export default {
-  name: 'FrameMenu'
+  name: 'FrameMenu',
+  methods: {
+    windowOperation (operation) {
+      ipcRenderer.send(operation)
+    }
+  }
 }
 </script>
 
@@ -34,6 +41,7 @@ export default {
   line-height: 26px;
   font-size: 12px;
   text-align: center;
+  -webkit-app-region: no-drag;
 }
 
 #frameMenu .close {

@@ -2,23 +2,15 @@
   <div id="wrapper">
     <el-row class="main">
       <el-col class="main-menu" style="text-align: center;position: relative">
-        <div style="margin-top: 35px; margin-bottom: 20px">
+        <div style="margin-top: 35px; margin-bottom: 12px">
           <img src="../assets/header.jpg" style="height: 35px; width: 35px;" alt="">
         </div>
-        <div class="menu-term" :class="selectId === 1 ? 'active' : ''" @click="checkMenu(1)">
-          <i class="el-icon-chat-dot-round"></i>
-        </div>
-        <div class="menu-term" :class="selectId === 2 ? 'active' : ''" @click="checkMenu(2)">
-          <i class="el-icon-user"></i>
-        </div>
-        <div class="menu-term" :class="selectId === 3 ? 'active' : ''" @click="checkMenu(3)">
-          <i class="el-icon-suitcase"></i>
-        </div>
-        <div class="menu-term" :class="selectId === 4 ? 'active' : ''" @click="checkMenu(4)">
-          <i class="el-icon-folder-opened"></i>
-        </div>
-        <div class="menu-term" :class="selectId === 5 ? 'active' : ''" @click="checkMenu(5)">
-          <i class="el-icon-orange"></i>
+        <div v-for="item in menus"
+             class="menu-term"
+             :key="item.id"
+             :class="selectId === item.id ? 'active' : ''"
+             @click="checkMenu(item)">
+          <i :class="item.icon"></i>
         </div>
         <div class="menu-term" style="position: fixed; bottom: 0; left: 15px;">
           <i class="el-icon-s-operation"></i>
@@ -65,8 +57,15 @@
     components: { SystemInformation, FrameMenu, ChatBlank, Chat },
     data () {
       return {
-        selectId: 1,
-        mainSearch: ''
+        selectId: '1',
+        mainSearch: '',
+        menus: [
+          { id: '1', icon: 'el-icon-chat-dot-round', path: '' },
+          { id: '2', icon: 'el-icon-user', path: '' },
+          { id: '3', icon: 'el-icon-suitcase', path: '' },
+          { id: '4', icon: 'el-icon-folder-opened', path: '' },
+          { id: '5', icon: 'el-icon-orange', path: '' }
+        ]
       }
     },
     methods: {
@@ -75,8 +74,8 @@
         remote.getCurrentWindow().setResizable(true)
         remote.getCurrentWindow().setMinimumSize(700, 500)
       },
-      checkMenu (menuId) {
-        this.selectId = menuId
+      checkMenu (item) {
+        this.selectId = item.id
       }
     },
     created () {
@@ -112,16 +111,19 @@
     height: 100vh;
     width: 55px;
     background-color: rgb(46, 46, 46);
+    -webkit-app-region: drag;
   }
 
   #wrapper .main .main-menu div {
-    margin-bottom: 20px;
+    -webkit-app-region: no-drag;
   }
 
   #wrapper .main .main-menu .menu-term {
     color: #969799;
     font-size: 20px;
     font-weight: 100;
+    height: 42px;
+    line-height: 42px;
     cursor: pointer;
   }
 

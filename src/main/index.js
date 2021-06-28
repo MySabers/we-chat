@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import '../renderer/store'
 
 /**
@@ -24,8 +24,8 @@ function createWindow () {
     height: 402,
     useContentSize: true,
     width: 277,
-    frame: false, /* 去掉顶部导航 去掉关闭按钮 最大化最小化按钮 */
-    transparent: true
+    frame: false /* 去掉顶部导航 去掉关闭按钮 最大化最小化按钮 */
+    // transparent: true
 
   })
 
@@ -35,6 +35,23 @@ function createWindow () {
     mainWindow = null
   })
 }
+
+// 登录窗口最小化
+ipcMain.on('window-min', function () {
+  mainWindow.minimize()
+})
+
+// 登录窗口最大化
+ipcMain.on('window-max', function () {
+  if (mainWindow.isMaximized()) {
+    mainWindow.restore()
+  } else {
+    mainWindow.maximize()
+  }
+})
+ipcMain.on('window-close', function () {
+  mainWindow.close()
+})
 
 app.on('ready', createWindow)
 
