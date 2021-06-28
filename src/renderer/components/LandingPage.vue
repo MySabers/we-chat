@@ -5,19 +5,19 @@
         <div style="margin-top: 35px; margin-bottom: 20px">
           <img src="../assets/header.jpg" style="height: 35px; width: 35px;" alt="">
         </div>
-        <div class="menu-term">
+        <div class="menu-term" :class="selectId === 1 ? 'active' : ''" @click="checkMenu(1)">
           <i class="el-icon-chat-dot-round"></i>
         </div>
-        <div class="menu-term">
+        <div class="menu-term" :class="selectId === 2 ? 'active' : ''" @click="checkMenu(2)">
           <i class="el-icon-user"></i>
         </div>
-        <div class="menu-term">
+        <div class="menu-term" :class="selectId === 3 ? 'active' : ''" @click="checkMenu(3)">
           <i class="el-icon-suitcase"></i>
         </div>
-        <div class="menu-term">
+        <div class="menu-term" :class="selectId === 4 ? 'active' : ''" @click="checkMenu(4)">
           <i class="el-icon-folder-opened"></i>
         </div>
-        <div class="menu-term">
+        <div class="menu-term" :class="selectId === 5 ? 'active' : ''" @click="checkMenu(5)">
           <i class="el-icon-orange"></i>
         </div>
         <div class="menu-term" style="position: fixed; bottom: 0; left: 15px;">
@@ -65,6 +65,7 @@
     components: { SystemInformation, FrameMenu, ChatBlank, Chat },
     data () {
       return {
+        selectId: 1,
         mainSearch: ''
       }
     },
@@ -73,6 +74,9 @@
         remote.getCurrentWindow().setSize(800, 500)
         remote.getCurrentWindow().setResizable(true)
         remote.getCurrentWindow().setMinimumSize(700, 500)
+      },
+      checkMenu (menuId) {
+        this.selectId = menuId
       }
     },
     created () {
@@ -110,14 +114,24 @@
     background-color: rgb(46, 46, 46);
   }
 
-  #wrapper .main .main-menu div{
+  #wrapper .main .main-menu div {
     margin-bottom: 20px;
   }
 
-  #wrapper .main .main-menu .menu-term{
+  #wrapper .main .main-menu .menu-term {
     color: #969799;
     font-size: 20px;
     font-weight: 100;
+    cursor: pointer;
+  }
+
+  #wrapper .main .main-menu .menu-term:hover {
+    cursor: pointer;
+    color: #a3a5a7;
+  }
+
+  #wrapper .main .main-menu .menu-term.active {
+    color: rgb(7, 193, 96);
   }
 
   #wrapper .main .main-contacts {
