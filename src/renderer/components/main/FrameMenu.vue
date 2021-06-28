@@ -44,8 +44,18 @@ export default {
   -webkit-app-region: no-drag;
 }
 
+#frameMenu div:hover {
+  background-color: rgb(229, 229, 229);
+}
+
 #frameMenu .close {
   right: 0;
+}
+
+#frameMenu .close:hover {
+  background-color: rgb(250, 81, 81);
+  color: #fff;
+
 }
 
 #frameMenu .full-or-not {
