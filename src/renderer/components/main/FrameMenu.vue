@@ -1,13 +1,13 @@
 <template>
 <div id="frameMenu">
-  <div class="minus">
-    <i class="el-icon-minus" @click="windowOperation('window-min')"></i>
+  <div class="minus" @click="windowOperation('window-min')">
+    <i class="el-icon-minus"></i>
   </div>
-  <div class="full-or-not">
-    <i class="el-icon-full-screen" @click="windowOperation('window-max')"></i>
+  <div class="full-or-not" @click="windowOperation('window-max')">
+    <i class="el-icon-full-screen"></i>
   </div>
-  <div class="close">
-    <i class="el-icon-close"  @click="windowOperation('window-close')"></i>
+  <div class="close" @click="windowOperation('window-close')">
+    <i class="el-icon-close"></i>
   </div>
 </div>
 </template>

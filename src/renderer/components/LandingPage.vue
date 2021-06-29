@@ -29,7 +29,8 @@
           </div>
         </div>
         <div class="pointers-body">
-          <ChatPointers></ChatPointers>
+<!--          <ChatPointers></ChatPointers>-->
+          <router-view name="ChatPointers"></router-view>
         </div>
       </el-col>
       <el-col class="main-content">
@@ -61,8 +62,8 @@
         selectId: '1',
         mainSearch: '',
         menus: [
-          { id: '1', icon: 'el-icon-chat-dot-round', path: '' },
-          { id: '2', icon: 'el-icon-user', path: '' },
+          { id: '1', icon: 'el-icon-chat-dot-round', path: 'chatPointers' },
+          { id: '2', icon: 'el-icon-user', path: 'ContactsPointer' },
           { id: '3', icon: 'el-icon-suitcase', path: '' },
           { id: '4', icon: 'el-icon-folder-opened', path: '' },
           { id: '5', icon: 'el-icon-orange', path: '' }
@@ -77,6 +78,7 @@
       },
       checkMenu (item) {
         this.selectId = item.id
+        this.$router.push(item.path)
       }
     },
     created () {
