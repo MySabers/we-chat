@@ -30,6 +30,29 @@ export default new Router({
           components: {
             ChatPointers: () => import('@/components/pointers/ContactsPointer')
           }
+        },
+        // 文件管理
+        {
+          path: '/FilePointer',
+          name: 'FilePointer',
+          components: {
+            ChatPointers: () => import('@/components/pointers/FilePointer')
+          }
+        },
+        // 个人收藏
+        {
+          path: '/StorePointer',
+          name: 'StorePointer',
+          components: {
+            ChatPointers: () => import('@/components/pointers/StorePointer')
+          }
+        },
+        {
+          path: '/WechatMoments',
+          name: 'WechatMoments',
+          components: {
+            ChatPointers: () => import('@/components/pointers/WechatMoments')
+          }
         }
       ]
     },

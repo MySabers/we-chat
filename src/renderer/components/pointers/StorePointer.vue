@@ -1,10 +1,11 @@
-<!-- 联系人界面 -->
+<!-- 个人收藏界面 -->
 <template>
+  暂未实现
 </template>
 
 <script>
 export default {
-  name: 'ContactsPointer'
+  name: 'StorePointer'
 }
 </script>
 

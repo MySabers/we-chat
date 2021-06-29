@@ -64,9 +64,9 @@
         menus: [
           { id: '1', icon: 'el-icon-chat-dot-round', path: 'chatPointers' },
           { id: '2', icon: 'el-icon-user', path: 'ContactsPointer' },
-          { id: '3', icon: 'el-icon-suitcase', path: '' },
-          { id: '4', icon: 'el-icon-folder-opened', path: '' },
-          { id: '5', icon: 'el-icon-orange', path: '' }
+          { id: '3', icon: 'el-icon-suitcase', path: 'StorePointer' },
+          { id: '4', icon: 'el-icon-folder-opened', path: 'FilePointer' },
+          { id: '5', icon: 'el-icon-orange', path: 'WechatMoments' }
         ]
       }
     },
@@ -192,18 +192,4 @@
     height: 100vh;
     width: calc(100vw - 305px);
   }
-
-
-
-
-
-  /*main {*/
-  /*  display: flex;*/
-  /*  justify-content: space-between;*/
-  /*}*/
-
-  /*main > div { flex-basis: 50%; }*/
-
-
-
 </style>

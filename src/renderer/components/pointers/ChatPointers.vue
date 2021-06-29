@@ -1,3 +1,4 @@
+<!-- 聊天界面 -->
 <template>
   <div id="chat-pointers">
     <img src="../../assets/header2.jpg" style="height: 40px; width: 40px" alt="">
