@@ -16,8 +16,8 @@
           <i class="el-icon-s-operation"></i>
         </div>
       </el-col>
-      <el-col class="main-contacts">
-        <div class="contacts-header">
+      <el-col class="main-pointers">
+        <div class="pointers-header">
           <el-input
               placeholder="搜索"
               prefix-icon="el-icon-search"
@@ -28,12 +28,8 @@
             +
           </div>
         </div>
-        <div class="contacts-body">
-            <div class="chat-pointer">
-              <img src="../assets/header2.jpg" style="height: 40px; width: 40px" alt="">
-              <span class="chat-name">室友-赵策</span>
-              <span class="chat-message">可能我理解的不对</span>
-            </div>
+        <div class="pointers-body">
+          <ChatPointers></ChatPointers>
         </div>
       </el-col>
       <el-col class="main-content">
@@ -46,15 +42,20 @@
 </template>
 
 <script>
-  import SystemInformation from './LandingPage/SystemInformation'
+  // 微信顶部菜单
   import FrameMenu from './main/FrameMenu'
+
+  // 聊天实体部分
   import ChatBlank from './main/ChatBlank'
   import Chat from './main/Chat'
+
+  import ChatPointers from './pointers/ChatPointers'
+
   const { remote } = require('electron')
 
   export default {
     name: 'landing-page',
-    components: { SystemInformation, FrameMenu, ChatBlank, Chat },
+    components: { FrameMenu, ChatBlank, Chat, ChatPointers },
     data () {
       return {
         selectId: '1',
@@ -136,7 +137,7 @@
     color: rgb(7, 193, 96);
   }
 
-  #wrapper .main .main-contacts {
+  #wrapper .main .main-pointers {
     height: 100vh;
     width: 250px;
     background-color: rgb(239, 239, 239);
@@ -144,31 +145,31 @@
   }
 
 
-  #wrapper .main .main-contacts .contacts-header {
+  #wrapper .main .main-pointers .pointers-header {
     height: 60px;
     background-color: rgb(247, 247, 247);
     position: relative;
   }
 
-  #wrapper .main .main-contacts .contacts-header .el-input {
+  #wrapper .main .main-pointers .pointers-header .el-input {
     width: 190px;
     margin-top: 25px;
     margin-left: 10px;
   }
 
-  #wrapper .main .main-contacts .contacts-header .el-input .el-input__inner{
+  #wrapper .main .main-pointers .pointers-header .el-input .el-input__inner{
     height: 24px;
     line-height: 24px;
     background-color: rgb(226,226,226);
   }
 
-  #wrapper .main .main-contacts .contacts-header .el-input.is-active .el-input__inner, .el-input__inner:focus {
+  #wrapper .main .main-pointers .pointers-header .el-input.is-active .el-input__inner, .el-input__inner:focus {
     border-color: rgb(226,226,226) !important;
     background-color: rgb(248, 248, 248) !important;
     outline: 0;
   }
 
-  #wrapper .main .main-contacts .contacts-header .createChat {
+  #wrapper .main .main-pointers .pointers-header .createChat {
     width: 24px;
     height: 24px;
     line-height: 24px;
@@ -181,32 +182,8 @@
     border-radius: 4px;
   }
 
-  #wrapper .main .main-contacts .contacts-body {
+  #wrapper .main .main-pointers .pointers-body {
     height: calc(100vh - 60px);
-  }
-
-  #wrapper .main .main-contacts .contacts-body .chat-pointer {
-    height: 40px;
-    padding: 12px 10px;
-    background-color: rgb(230, 230, 230);
-    position: relative;
-  }
-
-  #wrapper .main .main-contacts .contacts-body .chat-pointer .chat-name {
-    font-size: 12px;
-    font-weight: 600;
-    color: #1a1a1a;
-    position: absolute;
-    top: 14px;
-    left: 60px;
-  }
-
-  #wrapper .main .main-contacts .contacts-body .chat-pointer .chat-message {
-    font-size: 12px;
-    color: #969799;
-    position: absolute;
-    top: 36px;
-    left: 60px;
   }
 
   #wrapper .main .main-content {
