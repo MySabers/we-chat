@@ -1,6 +1,6 @@
 <!-- 个人收藏界面 -->
 <template>
-  暂未实现
+  <div>暂未实现</div>
 </template>
 
 <script>
