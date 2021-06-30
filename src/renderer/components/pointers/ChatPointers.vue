@@ -6,7 +6,7 @@
          class="chat-pointers"
          :class="currentSelectChat === item.id ? 'selected' : ''"
          @click="selectChat(item)">
-      <img :src="item.headerPath" style="height: 40px; width: 40px" alt="">
+      <img :src="item.headerPath" draggable="false" style="height: 40px; width: 40px" alt="">
       <span class="chat-name">{{item.name}}</span>
       <span class="chat-message">{{item.lastMessage}}</span>
     </div>
@@ -53,11 +53,16 @@ export default {
 </script>
 
 <style scoped>
+#chat-pointers {
+  user-select:none;
+  cursor: context-menu;
+}
 #chat-pointers .chat-pointers {
   height: 40px;
   padding: 12px 10px;
   background-color: rgb(230, 230, 230);
   position: relative;
+
 }
 
 #chat-pointers .chat-pointers .chat-name {
@@ -82,7 +87,7 @@ export default {
 }
 
 #chat-pointers .selected {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(196, 196, 196) !important;
 }
 
 </style>
