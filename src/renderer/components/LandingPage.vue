@@ -28,19 +28,9 @@
             +
           </div>
         </div>
-        <GeminiScrollbar
-            class="pointers-body"
-            @mouseover="addClass('mouseIn')"
-            @mouseout="addClass('mouseOut')"
-            :class="pointerBodyStyle">
+        <GeminiScrollbar class="pointers-body">
           <router-view name="ChatPointers"></router-view>
         </GeminiScrollbar>
-<!--        <div class="pointers-body"-->
-<!--             @mouseover="addClass('mouseIn')"-->
-<!--             @mouseout="addClass('mouseOut')"-->
-<!--             :class="pointerBodyStyle">-->
-<!--&lt;!&ndash;          <ChatPointers></ChatPointers>&ndash;&gt;-->
-<!--        </div>-->
       </el-col>
       <el-col class="main-content">
           <FrameMenu></FrameMenu>
@@ -211,29 +201,4 @@
   #wrapper .main .main-pointers .pointers-body .gm-scrollbar .thumb {
     background: rgba(0, 0, 0, 0) !important;
   }
-
-  /*.mouseOut::-webkit-scrollbar-thumb {*/
-  /*  background-color: transparent !important;*/
-  /*}*/
-
-  /*::-webkit-scrollbar {*/
-  /*  width: 8px;!*竖向滚动条的宽度*!*/
-  /*}*/
-  /*!*滚动条轨道的样式*!*/
-  /*::-webkit-scrollbar-track {*/
-  /*  -webkit-border-radius: 10px;*/
-  /*  border-radius: 10px;*/
-  /*  background-color: rgba(230, 230, 230, 0);*/
-
-  /*}*/
-  /*!*滚动条轨道内滑块的样式*!*/
-  /*::-webkit-scrollbar-thumb {*/
-  /*  -webkit-border-radius: 10px;*/
-  /*  border-radius: 10px;*/
-  /*  !*background: rgba(204, 201, 198, 0.8);*!*/
-  /*}*/
-  /*!*当焦点不在当前区域滑块的状态（具体为什么要加这句有点忘了，记得是跟刷新时有关）*!*/
-  /*::-webkit-scrollbar-thumb:window-inactive {*/
-  /*  background: rgba(155,155,155,0.4);*/
-  /*}*/
 </style>
