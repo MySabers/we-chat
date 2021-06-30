@@ -28,10 +28,19 @@
             +
           </div>
         </div>
-        <div class="pointers-body">
-<!--          <ChatPointers></ChatPointers>-->
+        <GeminiScrollbar
+            class="pointers-body"
+            @mouseover="addClass('mouseIn')"
+            @mouseout="addClass('mouseOut')"
+            :class="pointerBodyStyle">
           <router-view name="ChatPointers"></router-view>
-        </div>
+        </GeminiScrollbar>
+<!--        <div class="pointers-body"-->
+<!--             @mouseover="addClass('mouseIn')"-->
+<!--             @mouseout="addClass('mouseOut')"-->
+<!--             :class="pointerBodyStyle">-->
+<!--&lt;!&ndash;          <ChatPointers></ChatPointers>&ndash;&gt;-->
+<!--        </div>-->
       </el-col>
       <el-col class="main-content">
           <FrameMenu></FrameMenu>
@@ -61,6 +70,7 @@
       return {
         selectId: '1',
         mainSearch: '',
+        pointerBodyStyle: '',
         menus: [
           { id: '1', icon: 'el-icon-chat-dot-round', path: 'chatPointers' },
           { id: '2', icon: 'el-icon-user', path: 'ContactsPointer' },
@@ -79,6 +89,9 @@
       checkMenu (item) {
         this.selectId = item.id
         this.$router.push(item.path)
+      },
+      addClass (className) {
+        this.pointerBodyStyle = className
       }
     },
     created () {
@@ -89,15 +102,6 @@
 
 
 <style>
-  /*#wrapper {*/
-  /*  background:*/
-  /*      radial-gradient(*/
-  /*          ellipse at top left,*/
-  /*          rgba(255, 255, 255, 1) 40%,*/
-  /*          rgba(229, 229, 229, .9) 100%*/
-  /*      );*/
-  /*}*/
-
   #wrapper .main {
     height: 100vh;
     width: 100vw;
@@ -192,4 +196,44 @@
     height: 100vh;
     width: calc(100vw - 305px);
   }
+
+  #wrapper .main .main-pointers .pointers-body .gm-scrollbar {
+    right: 0;
+    width: 8px;
+    border-radius:4px;
+  }
+
+  /* scrollbar thumb */
+  #wrapper .main .main-pointers .pointers-body:hover .gm-scrollbar .thumb {
+    background: rgba(204, 201, 198, 0.8) !important;
+  }
+
+  #wrapper .main .main-pointers .pointers-body .gm-scrollbar .thumb {
+    background: rgba(0, 0, 0, 0) !important;
+  }
+
+  /*.mouseOut::-webkit-scrollbar-thumb {*/
+  /*  background-color: transparent !important;*/
+  /*}*/
+
+  /*::-webkit-scrollbar {*/
+  /*  width: 8px;!*竖向滚动条的宽度*!*/
+  /*}*/
+  /*!*滚动条轨道的样式*!*/
+  /*::-webkit-scrollbar-track {*/
+  /*  -webkit-border-radius: 10px;*/
+  /*  border-radius: 10px;*/
+  /*  background-color: rgba(230, 230, 230, 0);*/
+
+  /*}*/
+  /*!*滚动条轨道内滑块的样式*!*/
+  /*::-webkit-scrollbar-thumb {*/
+  /*  -webkit-border-radius: 10px;*/
+  /*  border-radius: 10px;*/
+  /*  !*background: rgba(204, 201, 198, 0.8);*!*/
+  /*}*/
+  /*!*当焦点不在当前区域滑块的状态（具体为什么要加这句有点忘了，记得是跟刷新时有关）*!*/
+  /*::-webkit-scrollbar-thumb:window-inactive {*/
+  /*  background: rgba(155,155,155,0.4);*/
+  /*}*/
 </style>
