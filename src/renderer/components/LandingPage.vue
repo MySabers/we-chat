@@ -75,6 +75,7 @@
         remote.getCurrentWindow().setSize(800, 500)
         remote.getCurrentWindow().setResizable(true)
         remote.getCurrentWindow().setMinimumSize(700, 500)
+        remote.getCurrentWindow().center()
       },
       checkMenu (item) {
         this.selectId = item.id
@@ -85,9 +86,9 @@
       }
     },
     mounted () {
-      // setTimeout(() => {
-      this.checkMenu(this.menus[0])
-      // }, 1000)
+      setTimeout(() => {
+        this.checkMenu(this.menus[0])
+      }, 50)
     },
     created () {
       this.changeSize()

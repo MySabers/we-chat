@@ -12,13 +12,6 @@
         <div style="height:1px; border-top: 1px solid #b5b9a9;margin: 0 auto"></div>
       </div>
       <div id="chatDown">
-<!--        <svg width="100%" height="auto" id="serverSvg"></svg>-->
-        asd<br>
-        asd<br> asd<br> asd<br> asd<br> asd<br>
-        asd<br>
-        asd<br>
-        asd<br>
-        asd<br> asd<br> asd<br> asd<br> asd<br> asd<br> asd<br>
       </div>
     </div>
   </div>
