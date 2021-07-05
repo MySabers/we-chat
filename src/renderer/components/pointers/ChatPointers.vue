@@ -39,6 +39,62 @@ export default {
           headerPath: '/static/yuyunpeng.jpg',
           lastMessage: '[ 动画表情 ]',
           chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
+        },
+        {
+          id: '3',
+          name: '大学-于云鹏',
+          headerPath: '/static/yuyunpeng.jpg',
+          lastMessage: '[ 动画表情 ]',
+          chatRecordPath: ''
         }
       ],
       currentSelectChat: ''

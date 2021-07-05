@@ -84,6 +84,11 @@
         this.pointerBodyStyle = className
       }
     },
+    mounted () {
+      // setTimeout(() => {
+      this.checkMenu(this.menus[0])
+      // }, 1000)
+    },
     created () {
       this.changeSize()
     }
@@ -191,6 +196,12 @@
     right: 0;
     width: 8px;
     border-radius:4px;
+    overflow-x: hidden
+  }
+
+  .gm-scrollbar.-horizontal {
+    background-color: transparent;
+    overflow-x: hidden
   }
 
   /* scrollbar thumb */
