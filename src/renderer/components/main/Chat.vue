@@ -6,7 +6,8 @@
     </div>
     <div ref="chatBox" id="chatBox">
       <div id="chatTop">
-<!--        <svg width="100%" height="auto"></svg>-->
+        <MessageShow>
+        </MessageShow>
       </div>
       <div id="chatResize">
         <div style="height:1px; border-top: 1px solid #b5b9a9;margin: 0 auto"></div>
@@ -18,8 +19,10 @@
 </template>
 
 <script>
+import MessageShow from './Message/MessageShow.vue'
 export default {
   name: 'chat',
+  components: [MessageShow],
   mounted () {
     this.dragControllerDiv()
   },
