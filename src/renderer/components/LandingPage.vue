@@ -199,18 +199,4 @@
     border-radius:4px;
     overflow-x: hidden
   }
-
-  .gm-scrollbar.-horizontal {
-    background-color: transparent;
-    overflow-x: hidden
-  }
-
-  /* scrollbar thumb */
-  #wrapper .main .main-pointers .pointers-body:hover .gm-scrollbar .thumb {
-    background: rgba(204, 201, 198, 0.8) !important;
-  }
-
-  #wrapper .main .main-pointers .pointers-body .gm-scrollbar .thumb {
-    background: rgba(0, 0, 0, 0) !important;
-  }
 </style>

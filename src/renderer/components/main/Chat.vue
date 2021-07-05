@@ -1,28 +1,33 @@
 <template>
   <div id="chat">
     <div class="header">
-      <span class="chat-name">室友-赵策</span>
+      <span class="chat-name">大学-于云鹏</span>
       <div class="other"><i class="el-icon-more"></i></div>
     </div>
     <div ref="chatBox" id="chatBox">
       <div id="chatTop">
-        <MessageShow>
-        </MessageShow>
+        <GeminiScrollbar class="pointers-body">
+          <MessageShow></MessageShow>
+        </GeminiScrollbar>
       </div>
       <div id="chatResize">
-        <div style="height:1px; border-top: 1px solid #b5b9a9;margin: 0 auto"></div>
+        <div style=" border-top: 1px solid #e8e8e8;margin: 0 auto"></div>
       </div>
       <div id="chatDown">
+        <GeminiScrollbar class="pointers-body">
+          <MessageInput></MessageInput>
+        </GeminiScrollbar>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import MessageShow from './Message/MessageShow.vue'
+import MessageShow from './Message/MessageShow'
+import MessageInput from './Message/MessageInput'
 export default {
   name: 'chat',
-  components: [MessageShow],
+  components: { MessageShow, MessageInput },
   mounted () {
     this.dragControllerDiv()
   },
@@ -41,7 +46,7 @@ export default {
           const maxT = chatBox.clientHeight - chatResize.offsetHeight
           if (moveLen < 30) moveLen = 30
           if (moveLen > maxT - 30) moveLen = maxT - 30
-          chatResize.style.top = moveLen
+          chatResize.style.top = moveLen.toString()
           chatTop.style.height = moveLen + 'px'
           chatDown.style.height = (chatBox.clientHeight - moveLen - 5) + 'px'
         }
@@ -100,7 +105,6 @@ export default {
 
 #chatResize {
   position: relative;
-  height:5px;
   width:100%;
   cursor: s-resize;
   float:left;
@@ -111,6 +115,5 @@ export default {
   width: 100%;
   float: left;
   min-height: 130px;
-  /*overflow: hidden;*/
 }
 </style>
