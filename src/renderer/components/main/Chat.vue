@@ -4,13 +4,21 @@
       <span class="chat-name">室友-赵策</span>
       <div class="other"><i class="el-icon-more"></i></div>
     </div>
-    <div ref="svgBox" id="svgBox">
-      <div id="svgTop">
+    <div ref="chatBox" id="chatBox">
+      <div id="chatTop">
 <!--        <svg width="100%" height="auto"></svg>-->
       </div>
-      <div id="svgResize"></div>
-      <div id="svgDown" style="border-top: 1px solid #b5b9a9;">
-        <svg width="100%" height="auto" id="serverSvg"></svg>
+      <div id="chatResize">
+        <div style="height:1px; border-top: 1px solid #b5b9a9;margin: 0 auto"></div>
+      </div>
+      <div id="chatDown">
+<!--        <svg width="100%" height="auto" id="serverSvg"></svg>-->
+        asd<br>
+        asd<br> asd<br> asd<br> asd<br> asd<br>
+        asd<br>
+        asd<br>
+        asd<br>
+        asd<br> asd<br> asd<br> asd<br> asd<br> asd<br> asd<br>
       </div>
     </div>
   </div>
@@ -24,29 +32,29 @@ export default {
   },
   methods: {
     dragControllerDiv () {
-      const svgResize = document.getElementById('svgResize')
-      const svgTop = document.getElementById('svgTop')
-      const svgDown = document.getElementById('svgDown')
-      const svgBox = document.getElementById('svgBox')
-      svgResize.onmousedown = function (e) {
+      const chatResize = document.getElementById('chatResize')
+      const chatTop = document.getElementById('chatTop')
+      const chatDown = document.getElementById('chatDown')
+      const chatBox = document.getElementById('chatBox')
+      chatResize.onmousedown = function (e) {
         const startY = e.clientY
-        svgResize.top = svgResize.offsetTop
+        chatResize.top = chatResize.offsetTop
         document.onmousemove = function (e) {
           const endY = e.clientY
-          let moveLen = svgResize.top + (endY - startY)
-          const maxT = svgBox.clientHeight - svgResize.offsetHeight
+          let moveLen = chatResize.top + (endY - startY)
+          const maxT = chatBox.clientHeight - chatResize.offsetHeight
           if (moveLen < 30) moveLen = 30
           if (moveLen > maxT - 30) moveLen = maxT - 30
-          svgResize.style.top = moveLen
-          svgTop.style.height = moveLen + 'px'
-          svgDown.style.height = (svgBox.clientHeight - moveLen - 5) + 'px'
+          chatResize.style.top = moveLen
+          chatTop.style.height = moveLen + 'px'
+          chatDown.style.height = (chatBox.clientHeight - moveLen - 5) + 'px'
         }
         document.onmouseup = function (evt) {
           document.onmousemove = null
           document.onmouseup = null
-          // svgResize.releaseCapture && svgResize.releaseCapture()
+          // chatResize.releaseCapture && chatResize.releaseCapture()
         }
-        // svgResize.setCapture && svgResize.setCapture()
+        // chatResize.setCapture && chatResize.setCapture()
       }
     }
   }
@@ -81,20 +89,20 @@ export default {
 
 
 
-#svgBox{
+#chatBox{
   width:100%;
   height:calc(100vh - 61px);
   position: relative;
   overflow:hidden;
 }
-#svgTop {
+#chatTop {
   height:calc(100vh - 30% - 66px);
   width:100%;
   float:left;
   overflow: auto;
 }
 
-#svgResize {
+#chatResize {
   position: relative;
   height:5px;
   width:100%;
@@ -102,10 +110,11 @@ export default {
   float:left;
 }
 
-#svgDown {
+#chatDown {
   height: calc(100vh - 61px);
   width: 100%;
   float: left;
-  overflow: hidden;
+  min-height: 130px;
+  /*overflow: hidden;*/
 }
 </style>
