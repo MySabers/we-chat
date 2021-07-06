@@ -90,7 +90,8 @@ export default {
 		float: left;
 		padding: 5px 10px;
 		background-color: #fff;
-		font-size: 14px;
+		font-size: 12px;
+    color: #323232;
 		border-radius: 2px;
 	}
 
@@ -116,7 +117,8 @@ export default {
   float: right;
   padding: 5px 10px;
   background-color: #98E165;
-  font-size: 14px;
+  font-size: 12px;
+  color: #323232;
   border-radius: 2px;
 }
 </style>

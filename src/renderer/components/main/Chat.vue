@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 #chat {
-  height: calc(100vh - 24px);
+  height: calc(100% - 24px);
   background-color: rgb(245, 245, 245);
 }
 
@@ -92,12 +92,11 @@ export default {
 
 #chatBox{
   width:100%;
-  height:calc(100vh - 61px);
+  height:calc(100% - 61px);
   position: relative;
-  overflow:hidden;
 }
 #chatTop {
-  height:calc(100vh - 30% - 66px);
+  height:calc(100% - 15% - 61px);
   width:100%;
   float:left;
   overflow: auto;
@@ -111,7 +110,7 @@ export default {
 }
 
 #chatDown {
-  height: calc(100vh - 61px);
+  height: calc(15% + 84px);
   width: 100%;
   float: left;
   min-height: 130px;

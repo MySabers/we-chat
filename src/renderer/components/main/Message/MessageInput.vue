@@ -30,7 +30,7 @@ export default {
 }
 #messageInput .message-input-body {
   background-color: #35495e;
-  /*height: calc(100% - 300px);*/
+  height: calc(100% - 65px);
 }
 
 #messageInput .message-input-footer {
