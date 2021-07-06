@@ -189,7 +189,7 @@
   }
 
   #wrapper .main .main-content {
-    height: 100vh;
+    height: 100%;
     width: calc(100vw - 305px);
   }
 

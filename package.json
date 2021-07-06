@@ -56,6 +56,7 @@
     "axios": "^0.18.0",
     "element-ui": "^2.15.2",
     "nedb": "^1.8.0",
+    "splitpanes": "^2.3.6",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-gemini-scrollbar": "^2.0.1",

@@ -15,8 +15,11 @@
       <div class="message-input-header-menu-right">
       </div>
     </div>
-    <div class="message-input-body">
-    </div>
+    <GeminiScrollbar class="pointers-body message-input-body">
+      <div style="height: 50px" contenteditable="true">
+<!--        a<br> a<br> a<br> a<br> a<br> a<br> a<br> a<br>-->
+      </div>
+    </GeminiScrollbar>
     <div class="message-input-footer">
       <el-button size="mini" style="margin-top: 2px">发送</el-button>
     </div>
@@ -35,19 +38,17 @@ export default {
   min-height: 130px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: beige;
 }
 
 #messageInput .message-input-header {
   height: 35px;
   position: relative;
-  background-color: #323232;
 }
 
 #messageInput .message-input-header div {
   height: 23px;
   width: 23px;
-  background-color: #35495e;
+  background-color: #c5c6c7;
   margin-top: 6px;
 }
 
@@ -62,7 +63,6 @@ export default {
 }
 
 #messageInput .message-input-body {
-  background-color: #35495e;
   height: calc(100% - 70px);
 }
 
@@ -70,6 +70,5 @@ export default {
   height: 35px;
   text-align: right;
   margin: 0 auto;
-  background-color: #98E165;
 }
 </style>

@@ -4,65 +4,35 @@
       <span class="chat-name">大学-于云鹏</span>
       <div class="other"><i class="el-icon-more"></i></div>
     </div>
-    <div ref="chatBox" id="chatBox">
-      <div id="chatTop">
+    <splitpanes class="default-theme" id="chatBox" horizontal>
+      <pane>
         <GeminiScrollbar class="pointers-body">
           <MessageShow></MessageShow>
         </GeminiScrollbar>
-      </div>
-      <div id="chatResize">
-        <div style=" border-top: 1px solid #e8e8e8;margin: 0 auto"></div>
-      </div>
-      <div id="chatDown">
-        <GeminiScrollbar class="pointers-body">
-          <MessageInput></MessageInput>
-        </GeminiScrollbar>
-      </div>
-    </div>
+      </pane>
+      <pane style="min-height: 130px">
+        <MessageInput></MessageInput>
+      </pane>
+    </splitpanes>
   </div>
 </template>
 
 <script>
+import { Splitpanes, Pane } from 'splitpanes'
+import 'splitpanes/dist/splitpanes.css'
 import MessageShow from './Message/MessageShow'
 import MessageInput from './Message/MessageInput'
 export default {
   name: 'chat',
-  components: { MessageShow, MessageInput },
+  components: { Splitpanes, Pane, MessageShow, MessageInput },
   mounted () {
-    this.dragControllerDiv()
   },
   methods: {
-    dragControllerDiv () {
-      const chatResize = document.getElementById('chatResize')
-      const chatTop = document.getElementById('chatTop')
-      const chatDown = document.getElementById('chatDown')
-      const chatBox = document.getElementById('chatBox')
-      chatResize.onmousedown = function (e) {
-        const startY = e.clientY
-        chatResize.top = chatResize.offsetTop
-        document.onmousemove = function (e) {
-          const endY = e.clientY
-          let moveLen = chatResize.top + (endY - startY)
-          const maxT = chatBox.clientHeight - chatResize.offsetHeight
-          if (moveLen < 30) moveLen = 30
-          if (moveLen > maxT - 30) moveLen = maxT - 30
-          chatResize.style.top = moveLen.toString()
-          chatTop.style.height = moveLen + 'px'
-          chatDown.style.height = (chatBox.clientHeight - moveLen - 5) + 'px'
-        }
-        document.onmouseup = function (evt) {
-          document.onmousemove = null
-          document.onmouseup = null
-          // chatResize.releaseCapture && chatResize.releaseCapture()
-        }
-        // chatResize.setCapture && chatResize.setCapture()
-      }
-    }
   }
 }
 </script>
 
-<style scoped>
+<style>
 #chat {
   height: calc(100% - 24px);
   background-color: rgb(245, 245, 245);
@@ -88,31 +58,21 @@ export default {
   color: #969799;
 }
 
-
-
 #chatBox{
   width:100%;
-  height:calc(100% - 61px);
+  height:calc(100% - 37px);
   position: relative;
 }
-#chatTop {
-  height:calc(100% - 15% - 61px);
-  width:100%;
-  float:left;
-  overflow: auto;
+#chatBox .splitpanes__splitter::before,
+#chatBox .splitpanes__splitter::after {
+  display: none;
 }
 
-#chatResize {
-  position: relative;
-  width:100%;
-  cursor: s-resize;
-  float:left;
+#chatBox .splitpanes__splitter {
+  height: 2px;
+  border: 1px solid #eaeaea;
+  cursor: n-resize;
 }
 
-#chatDown {
-  height: calc(15% + 84px);
-  width: 100%;
-  float: left;
-  min-height: 130px;
-}
+
 </style>
