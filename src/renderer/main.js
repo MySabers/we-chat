@@ -4,13 +4,16 @@ import axios from 'axios'
 import App from './App'
 import router from './router'
 import store from './store'
-
+// element-ui 组件库
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
+// 滚动条样式
 import GeminiScrollbar from 'vue-gemini-scrollbar'
-Vue.use(GeminiScrollbar)
+// 本地数据库 nedb
+import db from './datastore'
 
+Vue.prototype.$db = db
+Vue.use(GeminiScrollbar)
 Vue.use(ElementUI)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))

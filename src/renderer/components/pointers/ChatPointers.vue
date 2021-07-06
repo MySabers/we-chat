@@ -48,6 +48,23 @@ export default {
     selectChat (item) {
       this.currentSelectChat = item.id
     }
+  },
+  created () {
+    // this.$db.chatPointers.insert({
+    //   id: '2',
+    //   name: '室友-方鑫泽',
+    //   headerPath: '/static/fangxinze.jpg',
+    //   lastMessage: '来吗',
+    //   chatRecordPath: ''
+    // })
+    // this.$db.chatPointers.find({}, (err, docs) => {
+    //   if (err) {
+    //     console.log(err)
+    //     return
+    //   }
+    //   console.log(docs)
+    //   this.data = docs
+    // })
   }
 }
 </script>
