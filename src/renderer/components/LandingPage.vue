@@ -62,7 +62,7 @@
         mainSearch: '',
         pointerBodyStyle: '',
         menus: [
-          { id: '1', icon: 'el-icon-chat-dot-round', path: 'chatPointers' },
+          { id: '1', icon: 'el-icon-chat-round', path: 'chatPointers' },
           { id: '2', icon: 'el-icon-user', path: 'ContactsPointer' },
           { id: '3', icon: 'el-icon-suitcase', path: 'StorePointer' },
           { id: '4', icon: 'el-icon-folder-opened', path: 'FilePointer' },

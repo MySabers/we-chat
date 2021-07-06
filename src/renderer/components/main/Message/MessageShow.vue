@@ -1,21 +1,21 @@
 <!-- 聊天输入展示界面 -->
 <template>
   <div id="messageShow">
-    <el-row v-for="item in record" :key="item.id" style="margin-top: 8px">
+    <el-row v-for="item in record" :key="item.id" style="margin-top: 8px; position: relative">
       <template v-if="item.type === 'receive'">
-        <el-col span="2" style="width: 40px">
+        <el-col style="width: 40px">
           <img :src="item.header"
                draggable="false"
                style="height: 30px; width: 30px"
                alt="">
         </el-col>
-        <el-col span="16">
+        <el-col style="width: calc(100% - 25% - 40px)">
           <div class="frame">
             <div class="triangle"></div>
             <span class="message-content">{{item.message}}</span>
           </div>
         </el-col>
-        <el-col span="6"></el-col>
+        <el-col style="width: 25%; user-select:none;">&nbsp;</el-col>
       </template>
       <template v-else>
         <!-- 占位作用  -->
@@ -70,7 +70,7 @@ export default {
 }
 .frame {
 		width: 99%;
-		float: left;
+		/*float: left;*/
 		position: relative;
 		padding: 0 0 0 5px;
     height: 20px;
@@ -97,7 +97,7 @@ export default {
 
 .right-frame{
   width: 100%;
-  float: left;
+  /*float: left;*/
   position: relative;
   padding: 0 5px 0 0;
   height: 20px;
