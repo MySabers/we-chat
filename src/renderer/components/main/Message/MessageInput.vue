@@ -17,7 +17,7 @@
     </div>
     <div class="message-input-body" @click="focusin">
       <GeminiScrollbar class="pointers-body"  style="height: 100%">
-        <el-input type="textarea"  v-model="messageContent" autosize ref="textareaInput" />
+        <el-input type="textarea"  @blur="focusout" v-model="messageContent" autosize ref="textareaInput" />
       </GeminiScrollbar>
     </div>
 
@@ -112,5 +112,9 @@ export default {
 
 .FocusColor .el-textarea__inner {
   background-color: #fff
+}
+
+#messageInput .gm-scrollbar-container .gm-scroll-view {
+  overflow: hidden;
 }
 </style>
