@@ -56,7 +56,7 @@ export default {
         header: '/static/liuwei.jpg'
       })
     },
-    // TODO 为了解决下拉列别不能自动到最底下，暂时搁置
+    // TODO 为了解决滚动条不能自动到最底下，暂时搁置
     scrollUpdate (geminiScrollbar, scroll) {
       this[scroll] = geminiScrollbar
       this.$nextTick(() => {

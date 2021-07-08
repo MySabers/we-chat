@@ -56,13 +56,16 @@
     "axios": "^0.18.0",
     "element-ui": "^2.15.2",
     "nedb": "^1.8.0",
+    "rsocket-core": "0.0.25",
+    "rsocket-websocket-client": "0.0.25",
     "splitpanes": "^2.3.6",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-gemini-scrollbar": "^2.0.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "vuex-electron": "^1.0.0"
+    "vuex-electron": "^1.0.0",
+    "ws": "^7.5.2"
   },
   "devDependencies": {
     "ajv": "^6.5.0",

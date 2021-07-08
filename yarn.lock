@@ -613,6 +613,11 @@ array.prototype.flat@^1.2.4:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.1"
 
+asap@~2.0.3:
+  version "2.0.6"
+  resolved "https://registry.npm.taobao.org/asap/download/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
+  integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
+
 asn1.js@^5.2.0:
   version "5.4.1"
   resolved "https://registry.npm.taobao.org/asn1.js/download/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
@@ -2746,6 +2751,13 @@ cross-env@^5.1.6:
   dependencies:
     cross-spawn "^6.0.5"
 
+cross-fetch@^3.0.4:
+  version "3.1.4"
+  resolved "https://registry.npm.taobao.org/cross-fetch/download/cross-fetch-3.1.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-fetch%2Fdownload%2Fcross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha1-lyPzo6JHv4uJA586OAqSROj6Lzk=
+  dependencies:
+    node-fetch "2.6.1"
+
 cross-spawn@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-3.0.1.tgz#1256037ecb9f0c5f79e3d6ef135e30770184b982"
@@ -4014,6 +4026,24 @@ faye-websocket@^0.11.3:
   integrity sha1-fw2Sdc/dhqHJY9yLZfzEUe3Lsdo=
   dependencies:
     websocket-driver ">=0.5.1"
+
+fbjs-css-vars@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/fbjs-css-vars/download/fbjs-css-vars-1.0.2.tgz#216551136ae02fe255932c3ec8775f18e2c078b8"
+  integrity sha1-IWVRE2rgL+JVkyw+yHdfGOLAeLg=
+
+fbjs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/fbjs/download/fbjs-3.0.0.tgz?cache=0&sync_timestamp=1602047602038&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffbjs%2Fdownload%2Ffbjs-3.0.0.tgz#0907067fb3f57a78f45d95f1eacffcacd623c165"
+  integrity sha1-CQcGf7P1enj0XZXx6s/8rNYjwWU=
+  dependencies:
+    cross-fetch "^3.0.4"
+    fbjs-css-vars "^1.0.0"
+    loose-envify "^1.0.0"
+    object-assign "^4.1.0"
+    promise "^7.1.1"
+    setimmediate "^1.0.5"
+    ua-parser-js "^0.7.18"
 
 fd-slicer@~1.1.0:
   version "1.1.0"
@@ -6265,6 +6295,11 @@ no-case@^2.2.0, no-case@^2.3.2:
   dependencies:
     lower-case "^1.1.1"
 
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.npm.taobao.org/node-fetch/download/node-fetch-2.6.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-fetch%2Fdownload%2Fnode-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
+
 node-forge@^0.10.0:
   version "0.10.0"
   resolved "https://registry.npm.taobao.org/node-forge/download/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
@@ -7311,6 +7346,13 @@ promise-inflight@^1.0.1:
   resolved "https://registry.npm.taobao.org/promise-inflight/download/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
+promise@^7.1.1:
+  version "7.3.1"
+  resolved "https://registry.npm.taobao.org/promise/download/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
+  integrity sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=
+  dependencies:
+    asap "~2.0.3"
+
 proxy-addr@~2.0.5:
   version "2.0.7"
   resolved "https://registry.nlark.com/proxy-addr/download/proxy-addr-2.0.7.tgz#f19fe69ceab311eeb94b42e70e8c2070f9ba1025"
@@ -7859,6 +7901,40 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rsocket-core@0.0.25, rsocket-core@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.nlark.com/rsocket-core/download/rsocket-core-0.0.25.tgz#f1e1a3e7e8e369616a53eb76278aa7ad59d43ebe"
+  integrity sha1-8eGj5+jjaWFqU+t2J4qnrVnUPr4=
+  dependencies:
+    fbjs "^3.0.0"
+    rsocket-flowable "^0.0.25"
+    rsocket-types "^0.0.25"
+
+rsocket-flowable@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.nlark.com/rsocket-flowable/download/rsocket-flowable-0.0.25.tgz#cf1e14ee084b2039304636914782ea854b878f96"
+  integrity sha1-zx4U7ghLIDkwRjaRR4LqhUuHj5Y=
+  dependencies:
+    fbjs "^3.0.0"
+
+rsocket-types@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.nlark.com/rsocket-types/download/rsocket-types-0.0.25.tgz#c0a9559ff74b78b4e17f92da322a7be7323ee901"
+  integrity sha1-wKlVn/dLeLThf5LaMip75zI+6QE=
+  dependencies:
+    fbjs "^3.0.0"
+    rsocket-flowable "^0.0.25"
+
+rsocket-websocket-client@0.0.25:
+  version "0.0.25"
+  resolved "https://registry.nlark.com/rsocket-websocket-client/download/rsocket-websocket-client-0.0.25.tgz#6db21e323705755dc8fad214c9cfc345dae6df40"
+  integrity sha1-bbIeMjcFdV3I+tIUyc/DRdrm30A=
+  dependencies:
+    fbjs "^3.0.0"
+    rsocket-core "^0.0.25"
+    rsocket-flowable "^0.0.25"
+    rsocket-types "^0.0.25"
+
 run-async@^2.2.0:
   version "2.4.1"
   resolved "https://registry.npm.taobao.org/run-async/download/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
@@ -8081,7 +8157,7 @@ set-value@^2.0.0, set-value@^2.0.1:
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
 
-setimmediate@^1.0.4:
+setimmediate@^1.0.4, setimmediate@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/setimmediate/download/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
@@ -8897,6 +8973,11 @@ typedarray@^0.0.6:
   resolved "https://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+ua-parser-js@^0.7.18:
+  version "0.7.28"
+  resolved "https://registry.npm.taobao.org/ua-parser-js/download/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha1-i6BOZT81ziECOcZGYWhb+RId7DE=
+
 uglify-js@2.6.x:
   version "2.6.4"
   resolved "https://registry.nlark.com/uglify-js/download/uglify-js-2.6.4.tgz?cache=0&sync_timestamp=1622845662073&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fuglify-js%2Fdownload%2Fuglify-js-2.6.4.tgz#65ea2fb3059c9394692f15fed87c2b36c16b9adf"
@@ -9534,6 +9615,11 @@ ws@^6.2.1:
   integrity sha1-3Vzb1XqZeZFgl2UtePHMX66gwy4=
   dependencies:
     async-limiter "~1.0.0"
+
+ws@^7.5.2:
+  version "7.5.2"
+  resolved "https://registry.nlark.com/ws/download/ws-7.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fws%2Fdownload%2Fws-7.5.2.tgz#09cc8fea3bec1bc5ed44ef51b42f945be36900f6"
+  integrity sha1-CcyP6jvsG8XtRO9RtC+UW+NpAPY=
 
 xdg-basedir@^3.0.0:
   version "3.0.0"
