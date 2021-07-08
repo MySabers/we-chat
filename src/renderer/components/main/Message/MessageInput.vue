@@ -22,7 +22,7 @@
     </div>
 
     <div class="message-input-footer">
-      <el-button size="mini" style="margin-top: 2px">发送</el-button>
+      <el-button size="mini" style="margin-top: 2px" @click="sendMessage">发送</el-button>
     </div>
   </div>
 </template>
@@ -44,6 +44,12 @@ export default {
     },
     focusout () {
       this.backgroundColor = 'unFocusColor'
+    },
+    sendMessage () {
+      if (this.messageContent.trim() !== '') {
+        this.$emit('sendMessage', this.messageContent)
+        this.messageContent = ''
+      }
     }
   }
 }

@@ -40,24 +40,16 @@
 <script>
 export default {
   name: 'messageShow',
+  props: { record: Array },
   data () {
     return {
-      record: [
-        {
-          id: '1',
-          userId: '1',
-          type: 'receive',
-          message: '我前端不行，目前正在学vue',
-          header: '/static/yuyunpeng.jpg'
-        },
-        {
-          id: '2',
-          userId: '2',
-          type: 'send',
-          message: '那玩应真不用学，随用随学',
-          header: '/static/liuwei.jpg'
-        }
-      ]
+    }
+  },
+  methods: {
+  },
+  watch: {
+    record (val, oldVal) {
+      this.scoll
     }
   }
 }
@@ -93,6 +85,9 @@ export default {
 		font-size: 12px;
     color: #323232;
 		border-radius: 2px;
+    max-width: 100%;
+    word-wrap:break-word;
+    white-space:normal;
 	}
 
 .right-frame{
@@ -120,5 +115,8 @@ export default {
   font-size: 12px;
   color: #323232;
   border-radius: 2px;
+  max-width: 100%;
+  word-wrap:break-word;
+  white-space:normal;
 }
 </style>
